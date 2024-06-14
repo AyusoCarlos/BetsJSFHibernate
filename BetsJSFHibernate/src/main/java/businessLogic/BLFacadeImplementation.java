@@ -85,7 +85,7 @@ public class BLFacadeImplementation  implements BLFacade {
 		dbManager.close();
 		
 		return qry;
-   };
+   }
 	
 	/**
 	 * This method invokes the data access to retrieve the events of a given date 
@@ -133,7 +133,6 @@ public class BLFacadeImplementation  implements BLFacade {
 	 */	
     @WebMethod	
 	 public void initializeBD(){
-    	//dbManager.open();
     	HibernateDataAccess dbManager = new HibernateDataAccess();
 		dbManager.initializeDB();
 		dbManager.close();

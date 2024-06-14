@@ -93,7 +93,7 @@ public class QueryBean {
         Date currentDate = new Date(); // Obtener la fecha actual
         List<Date> datesWithEvents = businessLogic.getEventsMonth(currentDate); // Obtener los días del mes con eventos
         
-        List<Event> allEvents = new Vector<Event>();
+        List<Event> allEvents = new ArrayList<Event>();
         for (Date date : datesWithEvents) {
             List<Event> events = businessLogic.getEvents(date); // Obtener los eventos para cada día
             allEvents.addAll(events);
