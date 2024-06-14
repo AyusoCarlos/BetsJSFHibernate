@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="modelo.domain">
+    <class name="modelo.domain.Event" table="event">
+        <id name="eventNumber" type="java.lang.Integer">
+            <column name="eventNumber"/>
+            <generator class="identity"/>
+        </id>
+        <property name="description" column="description" type="java.lang.String"/>
+        <property name="eventDate" column="eventDate" type="java.util.Date"/>
+        
+        <set name="questions" table="question" inverse="true" cascade="all">
+            <key column="eventNumber"/>
+            <one-to-many class="modelo.domain.Question"/>
+        </set>
+    </class>
+</hibernate-mapping>

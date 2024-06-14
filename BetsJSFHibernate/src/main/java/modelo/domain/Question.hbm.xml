@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="modelo.domain">
+    <class name="modelo.domain.Question" table="question">
+        <id name="questionNumber" type="java.lang.Integer">
+            <column name="questionNumber"/>
+            <generator class="identity"/>
+        </id>
+        <property name="question" column="question" type="java.lang.String"/>
+        <property name="betMinimum" column="betMinimum" type="java.lang.Float"/>
+        <property name="result" column="result" type="java.lang.String"/>
+        <many-to-one name="event" class="modelo.domain.Event" fetch="join">
+            <column name="eventNumber" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

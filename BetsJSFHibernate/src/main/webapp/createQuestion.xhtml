@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Create Question</title>
+</h:head>
+<h:body>
+    <h:form>
+	    <!-- Input para la pregunta -->
+	    <h:inputText id="question" value="#{questionBean.question}" />
+	
+	    <!-- Select para seleccionar el evento -->
+    	<h:selectOneMenu id="event" value="#{questionBean.event}">
+        <!-- Llamada al método getAvailableEvents() para obtener la lista de eventos -->
+        <f:selectItems value="#{questionBean.availableEvents()}" var="event" itemLabel="#{event.description}" itemValue="#{event}" />
+    	</h:selectOneMenu>
+	
+	    <!-- Input para el monto de la apuesta -->
+	    <h:inputText id="betMinimum" value="#{questionBean.betMinimum}" />
+	
+	    <!-- Botón para enviar la pregunta -->
+	    <h:commandButton value="Crear Pregunta" action="#{questionBean.createQuestion}" />
+	</h:form>
+
+</h:body>
+</html>
