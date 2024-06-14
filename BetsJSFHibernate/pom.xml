@@ -13,6 +13,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sonar.organization>ayusocarlos</sonar.organization>
   		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  		<sonar.login>${env.SONAR_TOKEN}</sonar.login>
+    	<sonar.projectKey>0615f271cb2a75f429424dd318ba85043e9b35ba</sonar.projectKey>
  
 
 	</properties>
@@ -113,9 +115,16 @@
                 </configuration>
             </plugin>
             <plugin>
-    			<groupId>org.sonarsource.scanner.maven</groupId>
-    			<artifactId>sonar-maven-plugin</artifactId>
-    			<version>3.9.1.2184</version>
+			    <groupId>org.sonarsource.scanner.maven</groupId>
+			    <artifactId>sonar-maven-plugin</artifactId>
+			    <version>3.9.1.2184</version>
+			    <executions>
+			        <execution>
+			            <goals>
+			                <goal>sonar</goal>
+			            </goals>
+			        </execution>
+			    </executions>
 			</plugin>
 
         </plugins>
