@@ -1,0 +1,5 @@
+modelo.domain.Event#DoesQuestionExists(Ljava/lang/String;)Z
+java.lang.String#compareTo(Ljava/lang/String;)I
+==
+getQuestions modelo.domain.Event#getQuestions()Ljava/util/Set;
+getQuestion modelo.domain.Question#getQuestion()Ljava/lang/String;

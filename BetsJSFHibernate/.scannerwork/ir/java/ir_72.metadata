@@ -1,0 +1,6 @@
+businessLogic.BLFacadeImplementation#getEvents(Ljava/util/Date;)Ljava/util/List;
+dataAccess.HibernateDataAccess#<init>()V
+dataAccess.HibernateDataAccess#instance-init#
+==
+close dataAccess.HibernateDataAccess#close()V
+getEvents dataAccess.HibernateDataAccess#getEvents(Ljava/util/Date;)Ljava/util/List;

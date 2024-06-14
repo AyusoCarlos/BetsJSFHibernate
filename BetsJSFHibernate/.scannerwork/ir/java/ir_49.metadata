@@ -1,0 +1,4 @@
+dataAccess.HibernateDataAccess#close()V
+modelo.HibernateUtil.HibernateUtil#getSessionFactory()LSessionFactory;
+==
+println java.io.PrintStream#println(Ljava/lang/String;)V

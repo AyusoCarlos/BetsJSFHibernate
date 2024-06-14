@@ -1,0 +1,6 @@
+dataAccess.HibernateDataAccess#getEvents(Ljava/util/Date;)Ljava/util/List;
+java.util.ArrayList#<init>()V
+modelo.HibernateUtil.HibernateUtil#getSessionFactory()LSessionFactory;
+==
+println java.io.PrintStream#println([C)V
+println java.io.PrintStream#println(Ljava/lang/String;)V

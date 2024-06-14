@@ -1,0 +1,20 @@
+name: CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 20
+        uses: actions/setup-java@v2
+        with:
+          java-version: '20'
+      - name: Build with Maven
+        run: mvn clean install
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          SONAR_TOKEN: ${{ 653c125f9e1f88c0237838de8a82622bedeb467d }}
+        with:
+          projectKey: AyusoCarlos_BetsJSFHibernate
+          organization: ayusocarlos

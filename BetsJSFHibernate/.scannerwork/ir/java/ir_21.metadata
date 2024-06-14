@@ -1,0 +1,5 @@
+modelo.domain.Event#addQuestion(Ljava/lang/String;F)Lmodelo/domain/Question;
+modelo.domain.Question#instance-init#
+modelo.domain.Question#<init>(Ljava/lang/String;FLmodelo/domain/Event;)V
+==
+add java.util.Set#add(Ljava/lang/Object;)Z

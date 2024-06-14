@@ -1,0 +1,7 @@
+organization=ayusocarlos
+projectKey=AyusoCarlos_BetsJSFHibernate
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.55129
+dashboardUrl=https://sonarcloud.io/dashboard?id=AyusoCarlos_BetsJSFHibernate
+ceTaskId=AZAXSsBrzapxi95yr8Uu
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZAXSsBrzapxi95yr8Uu

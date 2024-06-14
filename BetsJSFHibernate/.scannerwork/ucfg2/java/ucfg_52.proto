@@ -1,0 +1,40 @@
+
+;modelo.bean.QuestionBean#createQuestion()Ljava/lang/String;e
+[C:/Users/carlo/git/repository2/BetsJSFHibernate/src/main/java/modelo/bean/QuestionBean.java^ ^( "4*&
+3a a("
+a a(	
+success*Î
+4` `(}
+{
+` `(
+%0businessLogic.BLFacade"__id*K
+
+__unknown_file (/*-
+modelo.bean.QuestionBean"
+businessLogicr
+p
+`0 `(8
+%1java.lang.String"__id*F
+
+__unknown_file (**(
+modelo.bean.QuestionBean"
+
+questionÆÃ
+` `(D
+%2"KbusinessLogic.BLFacade#createQuestion(LEvent;Ljava/lang/String;F)LQuestion;*:
+
+__unknown_file (
+
+%0businessLogic.BLFacade*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+%1java.lang.String*"
+
+__unknown_file (
+""2*createQuestion(LEvent;Ljava/lang/String;F)*
+3B
+modelo.bean.QuestionBeanH

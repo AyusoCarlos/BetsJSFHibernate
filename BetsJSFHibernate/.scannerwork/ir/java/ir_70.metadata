@@ -1,0 +1,7 @@
+businessLogic.BLFacadeImplementation#<init>()V
+dataAccess.HibernateDataAccess#<init>()V
+dataAccess.HibernateDataAccess#instance-init#
+==
+initializeDB dataAccess.HibernateDataAccess#initializeDB()V
+close dataAccess.HibernateDataAccess#close()V
+println java.io.PrintStream#println(Ljava/lang/String;)V

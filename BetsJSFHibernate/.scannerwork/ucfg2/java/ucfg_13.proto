@@ -1,0 +1,15 @@
+
+2modelo.domain.Event#getEventDate()Ljava/util/Date;`
+VC:/Users/carlo/git/repository2/BetsJSFHibernate/src/main/java/modelo/domain/Event.javaL L("1*Ÿ
+1M	 M(l
+j
+M	 M(
+%0java.util.Date"__id*B
+
+__unknown_file (&*$
+modelo.domain.Event"
+	eventDate""
+M M(
+
+%0java.util.DateB
+modelo.domain.EventH

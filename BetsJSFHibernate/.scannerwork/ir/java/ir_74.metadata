@@ -1,0 +1,5 @@
+businessLogic.BLFacadeImplementation#close()V
+dataAccess.HibernateDataAccess#<init>()V
+dataAccess.HibernateDataAccess#instance-init#
+==
+close dataAccess.HibernateDataAccess#close()V

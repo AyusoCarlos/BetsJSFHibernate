@@ -1,0 +1,7 @@
+modelo.bean.QuestionBean#availableEvents()Ljava/util/List;
+java.util.Vector#<init>()V
+java.util.Date#<init>()V
+java.util.Date#instance-init#
+==
+getEvents businessLogic.BLFacade#getEvents(Ljava/util/Date;)Ljava/util/List;
+getEventsMonth businessLogic.BLFacade#getEventsMonth(Ljava/util/Date;)Ljava/util/List;

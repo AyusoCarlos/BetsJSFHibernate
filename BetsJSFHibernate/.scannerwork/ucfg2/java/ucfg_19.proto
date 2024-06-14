@@ -1,0 +1,175 @@
+
+/modelo.domain.Event#equals(Ljava/lang/Object;)Zb
+VC:/Users/carlo/git/repository2/BetsJSFHibernate/src/main/java/modelo/domain/Event.javaÅ Å("startingBlock*%
+2
+ä
+ ä("
+
+ä ä(
+""*±
+3
+à à(i
+g
+
+à à(
+othermodelo.domain.Event"__id*5
+
+__unknown_file (
+
+objjava.lang.Objects
+q
+
+â â(
+%5java.lang.Integer"__id*D
+
+__unknown_file ((*&
+modelo.domain.Event"
+eventNumberz
+x
+
+â â(&
+%6java.lang.Integer"__id*K
+
+__unknown_file (/*-
+
+othermodelo.domain.Event"
+eventNumberª
+∏
+
+â â(&
+%7boolean"	__compare*"
+
+__unknown_file (
+!=*5
+
+__unknown_file (
+
+%5java.lang.Integer*5
+
+__unknown_file (
+
+%6java.lang.Integer*
+2
+1*ä
+startingBlock
+Å Å("å
+â
+
+Ä Ä(
+
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*5
+
+__unknown_file (
+
+objjava.lang.ObjectY
+W
+
+Å Å(!
+objjava.lang.Object"__annotation*"
+
+__unknown_file (
+
+%8*
+9*%
+4
+á
+ á("
+
+á á(
+""*É
+5
+Ü Ü(ïí
+
+Ü Ü(
+%2java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*3
+
+__unknown_file (
+modelo.domain.Event2
+getClass()óî
+
+Ü Ü("
+%3java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*5
+
+__unknown_file (
+
+objjava.lang.Object2
+getClass()∑
+¥
+
+Ü Ü("
+%4boolean"	__compare*"
+
+__unknown_file (
+!=*3
+
+__unknown_file (
+
+%2java.lang.Class*3
+
+__unknown_file (
+
+%3java.lang.Class*
+3
+4*%
+6
+Ö
+ Ö("
+
+Ö Ö(
+""*¬
+7
+Ñ Ñ(	®
+•
+
+Ñ Ñ(
+%1boolean"	__compare*"
+
+__unknown_file (
+==*5
+
+__unknown_file (
+
+objjava.lang.Object*"
+
+__unknown_file (
+""*
+5
+6*%
+8
+É
+ É("
+
+É É(
+""*”
+9
+Ç Ç(
+π
+∂
+
+Ç Ç(
+%0boolean"	__compare*"
+
+__unknown_file (
+==*3
+
+__unknown_file (
+modelo.domain.Event*5
+
+__unknown_file (
+
+objjava.lang.Object*
+7
+8*%
+1
+ã	 ã("
+
+ã ã(
+"":%
+
+Å Å(!
+objjava.lang.ObjectB
+modelo.domain.EventHX

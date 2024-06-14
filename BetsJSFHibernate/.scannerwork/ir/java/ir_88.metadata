@@ -1,0 +1,6 @@
+modelo.bean.QueryBean#queryQuestions()V
+java.util.ArrayList#<init>()V
+java.util.Date#<init>(J)V
+java.util.Date#instance-init#
+==
+getEvents businessLogic.BLFacade#getEvents(Ljava/util/Date;)Ljava/util/List;
