@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Inicio</title>
+</h:head>
+<h:body>
+    <h:form>
+        <h:panelGrid columns="1">
+            <!-- Botón para ir a la página de crear pregunta -->
+            <h:commandButton value="Crear Pregunta" action="createQuestion.xhtml?faces-redirect=true" />
+            
+            
+            <!-- Botón para ir a la página de consultar preguntas -->
+            <h:commandButton value="Consultar Preguntas" action="queryQuestions.xhtml?faces-redirect=true" />
+        </h:panelGrid>
+    </h:form>
+</h:body>
+</html>
