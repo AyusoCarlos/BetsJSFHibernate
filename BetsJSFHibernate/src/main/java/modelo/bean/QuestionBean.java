@@ -1,42 +1,58 @@
 package modelo.bean;
 
 import java.util.Date;
-
 import java.util.List;
-import java.util.Vector;
+import java.time.LocalDate;
+import java.time.ZoneId;
+
 import java.util.ArrayList;
 
-import javax.persistence.*;
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+import javax.faces.context.FacesContext;
 
 import businessLogic.BLFacade;
 import businessLogic.BLFacadeImplementation;
+import configuration.UtilDate;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
-import configuration.UtilDate;
 import domain.Event;
+import javax.faces.event.AjaxBehaviorEvent;
 
+import org.primefaces.event.SelectEvent;
 
+@ManagedBean(name = "QuestionBean")
+@ViewScoped
 public class QuestionBean {
     
     private Long id;
-    
-    private String question;
-    
+    private String questionText;
     private float betMinimum;
-    
     private String result;
-    
-  
+    private List<Event> events;
+    private Date eventDate;
     private BLFacade businessLogic;
-    
-   
     private Event event;
+    private String eventNumber;
 
     public QuestionBean() {
-        this.businessLogic =  new BLFacadeImplementation();
+        this.businessLogic = new BLFacadeImplementation();
+        //this.eventDate =UtilDate.newDate(2024,6,17); 
+       // Inicializar con la fecha actual
+         // Inicializar la lista de eventos
     }
 
-    // Getters y Setters
+    public String getEventNumber() {
+		return eventNumber;
+		
+	}
+
+	public void setEventNumber(String eventNumber) {
+		this.eventNumber = eventNumber;
+	}
+
+	// Getters y Setters
     public Long getId() {
         return id;
     }
@@ -45,12 +61,12 @@ public class QuestionBean {
         this.id = id;
     }
 
-    public String getQuestion() {
-        return question;
+    public String getQuestionText() {
+        return questionText;
     }
 
     public void setQuestionText(String questionText) {
-        this.question = questionText;
+        this.questionText = questionText;
     }
 
     public Event getEvent() {
@@ -61,14 +77,14 @@ public class QuestionBean {
         this.event = event;
     }
 
-    public double getBetMinimum() {
+    public float getBetMinimum() {
         return betMinimum;
     }
 
-    public void setBetMinimum(Float betMinimum) {
+    public void setBetMinimum(float betMinimum) {
         this.betMinimum = betMinimum;
     }
-    
+
     public String getResult() {
         return result;
     }
@@ -77,28 +93,70 @@ public class QuestionBean {
         this.result = result;
     }
 
-    // Método para obtener la lista de eventos disponibles
-    //@Transient
-    public List<Event> availableEvents() {
-        Date currentDate = new Date(); // Obtener la fecha actual
-        List<Date> datesWithEvents = businessLogic.getEventsMonth(currentDate); // Obtener los días del mes con eventos
-        
-        List<Event> allEvents = new ArrayList<Event>();
-        for (Date date : datesWithEvents) {
-            List<Event> events = businessLogic.getEvents(date); // Obtener los eventos para cada día
-            allEvents.addAll(events);
-        }
-        
-        return allEvents;
+    public Date getEventDate() {
+        return eventDate;
     }
 
-    public String createQuestion() throws EventFinished {
+    public void setEventDate(Date eventDate) {
+        this.eventDate = eventDate;
+    }
+
+    public List<Event> getEvents() {
+        return events;
+    }
+
+    // Método para obtener la lista de eventos disponibles en la fecha actual
+    public void updateEvents() {
+            this.events = businessLogic.getEvents(this.eventDate);
+            System.out.println(this.eventDate);
+            System.out.println(this.events);
+            eventNumber = null;
+       
+    }
+    
+    public void onDateSelect(SelectEvent event) {
+    	FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Fecha escogida: " + event.getObject()));
+        System.out.println(event.getObject());
+        eventDate =Date.from(((LocalDate) event.getObject()).atStartOfDay(ZoneId.systemDefault()).toInstant());
+        
+        updateEvents();
+        eventNumber = null;
+        
+    }
+    
+    public void LlenarEvent() {
+    	Event e = null;
+    	try {
+    		for (Event i : events) {
+    			if((Integer.valueOf(eventNumber).intValue()==i.getEventNumber().intValue())) {
+    				e = i;
+    			}
+    			
+    		}
+    	if (e == null) {
+    		System.out.println("NO existe");
+    	}else {
+    		System.out.println("SI existe"+ e);
+    		event = e;
+    	}
+    		
+    		
+    	}catch(Exception e1){
+    		
+    	}
+    }
+
+
+    public void createQuestion() {
         try {
-            businessLogic.createQuestion(event, question,betMinimum);
-            return "success";
-        } catch (QuestionAlreadyExist e) {
+        	LlenarEvent();
+        	System.out.println(event +"DD");
+            businessLogic.createQuestion(event, questionText, betMinimum);
+            
+        } catch (Exception e) {
             e.printStackTrace();
-            return "failure";
         }
     }
+    
+   
 }
